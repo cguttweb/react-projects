@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Form = (props) => {
   const [username, setUsername] = useState('')
-  
+
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -14,8 +14,9 @@ const Form = (props) => {
   }
 
   return (
-    <form onSubmit={}>
-      
+    <form onSubmit={handleSubmit}>
+    <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} placeholder="Github username" required />
+      <button type="submit">Search</button>
     </form>
   )
 }
